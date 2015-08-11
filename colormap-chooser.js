@@ -50,7 +50,9 @@
 
     CMChooser.prototype.select = function(key)
     {
-        var selected_colormap = {key: colorbrewer[key]};
+        var selected_colormap = {};
+        selected_colormap[key] = colorbrewer[key];
+        
         var container = d3.select(this.element)
             .select("button");
         container.html("");
