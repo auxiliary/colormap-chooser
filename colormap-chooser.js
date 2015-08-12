@@ -52,7 +52,7 @@
     {
         var selected_colormap = {};
         selected_colormap[key] = colorbrewer[key];
-        
+
         var container = d3.select(this.element)
             .select("button");
         container.html("");
@@ -69,7 +69,7 @@
         d3.select(this.element)
             .attr("class", this.settings.dropup ? "dropup" : "dropdown")
             .append("button")
-            .attr("class", "btn btn-default dropdown-toggle")
+            .attr("class", "btn btn-xs btn-default dropdown-toggle")
             .attr("data-toggle", "dropdown");
 
         var colormaps_container = d3.select(this.element)
@@ -103,7 +103,6 @@
                 'display':          'inline-block',
                 'vertical-align':   'bottom',
                 'background':       '#fff',
-                'border':           'solid 1px #aaa'
             })
             .attr("title", function(d){ return d.key; })
             .on("click", onclick)
@@ -116,7 +115,7 @@
                 'display': 'inline-block',
                 'vertical-align': 'middle',
                 'width': '20px',
-                'height': '22px',
+                'height': '20px',
             });
     }
 
